@@ -28,12 +28,12 @@ EXPECTED_RESOURCES: list[tuple] = [
 ]
 
 EXPECTED_REFERRALS: list[tuple] = [
-    (1, "Martinez", 1, date(2026, 1, 10), "Needs weekly groceries"),
-    (2, "Chen", 1, date(2026, 1, 12), "Returning family"),
-    (3, "Patel", 2, date(2026, 1, 15), "New patient intake"),
-    (4, "Okafor", 3, date(2026, 2, 1), "Temporary housing"),
-    (5, "Williams", 3, date(2026, 2, 5), "Follow-up visit"),
-    (6, "Garcia", 5, date(2026, 2, 20), "Career counseling"),
+    (1, "Miguel", 1, date(2026, 1, 10), "Needs weekly groceries"),
+    (2, "Nishit", 1, date(2026, 1, 12), "Returning family"),
+    (3, "Esther", 2, date(2026, 1, 15), "New patient intake"),
+    (4, "Emilio", 3, date(2026, 2, 1), "Temporary housing"),
+    (5, "Dominic", 3, date(2026, 2, 5), "Follow-up visit"),
+    (6, "Lucas", 5, date(2026, 2, 20), "Career counseling"),
 ]
 
 
@@ -200,12 +200,12 @@ def test_query_04_join_returns_family_and_resource_name(db_conn):
         f"Got: {colnames}"
     )
     expected = [
-        ("Martinez", "Community Food Pantry"),
-        ("Chen", "Community Food Pantry"),
-        ("Patel", "Harbor Health Clinic"),
-        ("Okafor", "Riverside Family Shelter"),
-        ("Williams", "Riverside Family Shelter"),
-        ("Garcia", "Job Ready Training Center"),
+        ("Miguel", "Community Food Pantry"),
+        ("Nishit", "Community Food Pantry"),
+        ("Esther", "Harbor Health Clinic"),
+        ("Emilio", "Riverside Family Shelter"),
+        ("Dominic", "Riverside Family Shelter"),
+        ("Lucas", "Job Ready Training Center"),
     ]
     assert rows == expected, (
         "04_referrals_with_resource_names.sql should JOIN referrals to resources and ORDER BY referrals.id. "

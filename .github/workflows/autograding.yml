@@ -41,6 +41,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # autograding-command-grader often runs pytest without inheriting workflow env.
+      # Tests load REPO_ROOT/.env via python-dotenv (same values as workflow env / postgres service).
+      - name: Create .env for pytest
+        run: |
+          {
+            echo "POSTGRES_HOST=${{ env.POSTGRES_HOST }}"
+            echo "POSTGRES_PORT=${{ env.POSTGRES_PORT }}"
+            echo "POSTGRES_USER=${{ env.POSTGRES_USER }}"
+            echo "POSTGRES_PASSWORD=${{ env.POSTGRES_PASSWORD }}"
+            echo "POSTGRES_DB=${{ env.POSTGRES_DB }}"
+          } > .env
+
       - name: Pytest (Command Grader)
         id: pytest
         uses: education/autograding-command-grader@v1
