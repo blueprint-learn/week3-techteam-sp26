@@ -1,0 +1,37 @@
+-- Week 3 — Seed data for local practice + automated tests
+--
+-- TASK 2: Insert the rows below in the correct order.
+-- Use explicit ids (1..5 for resources, 1..6 for referrals) so tests are stable.
+--
+-- Resources (insert exactly these 5 rows):
+-- +----+--------------------------------+-------------+------------------------+-------------------------------+
+-- | id | name                           | category    | address                | contact_email                 |
+-- +----+--------------------------------+-------------+------------------------+-------------------------------+
+-- | 1  | Community Food Pantry          | Food        | 100 Main St            | pantry@example.org            |
+-- | 2  | Harbor Health Clinic           | Healthcare  | 200 Bay Rd             | intake@harborhealth.example   |
+-- | 3  | Riverside Family Shelter       | Housing     | 45 River Ave           | frontdesk@riverside.example   |
+-- | 4  | Open Hands Legal Aid           | Legal       | 88 Court St            | help@openhands.example        |
+-- | 5  | Job Ready Training Center      | Education   | 12 Workshop Ln         | info@jobready.example         |
+-- +----+--------------------------------+-------------+------------------------+-------------------------------+
+--
+-- Referrals (insert exactly these 6 rows):
+-- +----+--------------+-------------+---------------+--------------------------------+
+-- | id | family_name  | resource_id | referral_date | notes                          |
+-- +----+--------------+-------------+---------------+--------------------------------+
+-- | 1  | Martinez     | 1           | 2026-01-10    | Needs weekly groceries         |
+-- | 2  | Chen         | 1           | 2026-01-12    | Returning family               |
+-- | 3  | Patel        | 2           | 2026-01-15    | New patient intake             |
+-- | 4  | Okafor       | 3           | 2026-02-01    | Temporary housing              |
+-- | 5  | Williams     | 3           | 2026-02-05    | Follow-up visit                |
+-- | 6  | Garcia       | 5           | 2026-02-20    | Career counseling              |
+-- +----+--------------+-------------+---------------+--------------------------------+
+--
+-- Notes:
+--   - Multiple referrals point to the same resource (Food pantry + shelter examples).
+--   - One resource (Legal) has zero referrals on purpose (used in the GROUP BY task).
+--
+-- TODO: Write INSERT statements for `resources` and `referrals` using the rows above.
+
+-- TODO: INSERT INTO resources ...
+
+-- TODO: INSERT INTO referrals ...

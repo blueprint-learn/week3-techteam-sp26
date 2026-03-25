@@ -1,0 +1,28 @@
+-- Week 3 — Intro to PostgreSQL (CommunityBridge-themed practice data)
+--
+-- TASK 1: Define two related tables for a simplified nonprofit resource hub.
+--
+-- Requirements:
+--   1) Create table `resources` with columns:
+--        - id          : primary key (SERIAL is fine)
+--        - name        : VARCHAR or TEXT, NOT NULL
+--        - category    : VARCHAR or TEXT
+--        - address     : VARCHAR or TEXT
+--        - contact_email : VARCHAR or TEXT
+--
+--   2) Create table `referrals` with columns:
+--        - id            : primary key (SERIAL is fine)
+--        - family_name   : VARCHAR or TEXT, NOT NULL
+--        - resource_id   : INTEGER that REFERENCES resources(id)
+--        - referral_date : DATE
+--        - notes         : TEXT (or VARCHAR)
+--
+--   3) Add a FOREIGN KEY so every referrals.resource_id must match resources.id
+--   4) Create referrals AFTER resources (Postgres needs the referenced table first)
+--
+-- TODO: Replace the placeholders below with real CREATE TABLE statements.
+--       Delete the dummy line once your statements are in place.
+
+-- TODO: CREATE TABLE resources ( ... );
+
+-- TODO: CREATE TABLE referrals ( ... );

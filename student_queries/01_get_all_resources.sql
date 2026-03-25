@@ -1,0 +1,8 @@
+-- TASK 3: Return every column for all resources.
+--
+-- Requirements:
+--   - Use SELECT
+--   - Include all rows from `resources`
+--   - Order by id ascending (so results are easy to read and test)
+--
+-- TODO: Write your query below (replace this comment with SQL).

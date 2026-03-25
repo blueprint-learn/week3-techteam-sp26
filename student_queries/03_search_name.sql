@@ -1,0 +1,10 @@
+-- TASK 5: Case-insensitive search for resources by name.
+--
+-- Requirements:
+--   - Find rows whose name contains the word pantry (any capitalization), e.g.
+--       "Pantry", "PANTRY", "pantry"
+--   - Must be case-insensitive (use ILIKE, or LOWER(...) with LIKE)
+--   - Return columns: id, name, category
+--   - Order by id ascending
+--
+-- TODO: Write your query below.

@@ -1,0 +1,9 @@
+-- TASK 4: List resources that are in the Food category.
+--
+-- Requirements:
+--   - Use WHERE to filter by category
+--   - Match the exact category name: Food
+--   - Return all columns from `resources`
+--   - Order by id ascending
+--
+-- TODO: Write your query below.
